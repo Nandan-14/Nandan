@@ -1,0 +1,83 @@
+/* ===== Global Container ===== */
+.bookpage {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.ride-title {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #0a84ff;
+}
+
+/* ===== Form Styles ===== */
+.ride-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.ride-form input,
+.ride-form select {
+  padding: 2px 5px;
+  font-size: 16px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.ride-form input:focus,
+.ride-form select:focus {
+  box-shadow: 0 8px 20px rgba(10, 132, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* ===== Submit Button ===== */
+.book-btn {
+  padding:  10px;
+  font-size: 16px;
+  font-weight: 60;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #0a84ff, #14b8a6);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(10, 132, 255, 0.3);
+}
+
+.book-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(10, 132, 255, 0.4);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .bookpage {
+    margin: 30px 15px;
+    padding: 25px;
+  }
+
+  .ride-title {
+    font-size: 2px;
+  }
+
+  .ride-form input,
+  .ride-form select,
+  .book-btn {
+    font-size: 15px;
+    padding: 4px 8px;
+  }
+}

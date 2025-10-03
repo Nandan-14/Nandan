@@ -1,0 +1,268 @@
+/* ===== Theme Variables ===== */
+:root {
+  --primary: #0a84ff;
+  --primary-dark: #0060df;
+  --accent: #14b8a6;
+  --bg-gradient: linear-gradient(135deg, #f9fafb, #e5ebf7);
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --radius: 18px;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --transition: all 0.3s ease;
+  --font-main: "Inter", "Poppins", sans-serif;
+}
+
+/* ===== Page Container ===== */
+.cab-container {
+  min-height: 100vh;
+  background: var(--bg-gradient);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  font-family: var(--font-main);
+  animation: fadeIn 0.6s ease;
+}
+
+/* ===== Heading ===== */
+.cab-container h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 40px;
+  text-align: center;
+  position: relative;
+  letter-spacing: -0.5px;
+}
+
+.cab-container h2::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 80px;
+  background: var(--primary);
+  margin: 14px auto 0;
+  border-radius: 4px;
+  animation: slideIn 0.8s ease forwards;
+}
+
+/* ===== Grid Layout ===== */
+.cab-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 10px;
+}
+
+/* ===== Cab Card ===== */
+.cab-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(16px);
+  border-radius: var(--radius);
+  padding: 24px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cab-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+}
+
+/* ===== Card Image ===== */
+.cab-card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 18px;
+  transition: transform 0.4s ease;
+}
+
+.cab-card:hover img {
+  transform: scale(1.06);
+}
+
+/* ===== Titles & Text ===== */
+.cab-card h4 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #111;
+  margin: 8px 0 6px;
+}
+
+.cab-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 4px 0;
+}
+
+.cab-card p.price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-top: 8px;
+}
+
+/* ===== Premium Badge ===== */
+.cab-card::before {
+  content: "⭐ Premium Pick";
+  position: absolute;
+  top: 18px;
+  right: -50px;
+  transform: rotate(45deg);
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 6px 50px;
+  border-radius: 4px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+
+.cab-card:nth-child(2)::before {
+  display: block; /* Highlight Sedan as Premium */
+}
+
+/* ===== Button ===== */
+.cab-card button {
+  margin-top: 16px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #fff;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 6px 16px rgba(10, 132, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.cab-card button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.4);
+  transition: 0.6s;
+}
+
+.cab-card button:hover::after {
+  left: 100%;
+}
+
+.cab-card button:hover {
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(10, 132, 255, 0.5);
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { width: 0; }
+  to   { width: 80px; }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .cab-container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 28px;
+  }
+
+  .cab-card {
+    padding: 18px;
+  }
+
+  .cab-card h4 {
+    font-size: 1.2rem;
+  }
+
+  .cab-card p {
+    font-size: 0.9rem;
+  }
+
+  .cab-card button {
+    font-size: 0.9rem;
+    padding: 10px 16px;
+  }
+}
+/* Base cab-card styles (same as before) */
+.cab-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(16px);
+  border-radius: var(--radius);
+  padding: 24px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  /* Animation setup */
+  opacity: 0;
+}
+
+/* Slide from left */
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-60px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* Slide from right */
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(60px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* Slide up (vertical) */
+@keyframes slideInUp {
+  from { opacity: 0; transform: translateY(60px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Alternate animations for cards */
+.cab-card:nth-child(1) {
+  animation: slideInLeft 0.8s ease forwards;
+  animation-delay: 0.2s;
+}
+
+.cab-card:nth-child(2) {
+  animation: slideInUp 0.8s ease forwards;
+  animation-delay: 0.4s;
+}
+
+.cab-card:nth-child(3) {
+  animation: slideInRight 0.8s ease forwards;
+  animation-delay: 0.6s;
+}
+
+.cab-card:nth-child(4) {
+  animation: slideInUp 0.8s ease forwards;
+  animation-delay: 0.8s;
+}
+
+/* And so on — keeps alternating between horizontal + vertical */

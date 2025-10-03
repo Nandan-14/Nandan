@@ -1,0 +1,115 @@
+/* ===== Container ===== */
+.register-container {
+  max-width: 450px;
+  margin: 70px auto;
+  padding: 40px 30px;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(15px);
+  border-radius: 25px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.register-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #0a84ff;
+  text-align: center;
+}
+
+/* ===== Error Box ===== */
+.error-box {
+  width: 100%;
+  padding: 12px 15px;
+  background: rgba(255, 0, 0, 0.1);
+  color: #ff0000;
+  border-radius: 15px;
+  text-align: center;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(255, 0, 0, 0.1);
+}
+
+/* ===== Form ===== */
+.register-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.register-form input {
+  padding: 12px 15px;
+  font-size: 16px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.register-form input:focus {
+  box-shadow: 0 10px 25px rgba(10, 132, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* ===== Button ===== */
+.register-btn {
+  padding: 12px 0;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #0a84ff, #14b8a6);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(10, 132, 255, 0.3);
+}
+
+.register-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(10, 132, 255, 0.4);
+}
+
+/* ===== Footer ===== */
+.register-footer {
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+}
+
+.register-footer span {
+  color: #0a84ff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.register-footer span:hover {
+  text-decoration: underline;
+  transform: translateY(-2px);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 480px) {
+  .register-container {
+    margin: 50px 15px;
+    padding: 30px 20px;
+  }
+
+  .register-title {
+    font-size: 24px;
+  }
+
+  .register-form input,
+  .register-btn {
+    font-size: 15px;
+    padding: 10px 12px;
+  }
+}

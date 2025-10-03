@@ -1,0 +1,40 @@
+/* Account.css */
+
+.page2{
+  padding: 24px;
+  max-width: 900px;
+  margin: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #000000;
+  color: #fdfafa;
+}
+
+.account-list {
+  list-style-type: none;
+  align-items: center;
+  padding: 0;
+  margin:0;
+}
+
+.account-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.account-list li button {
+  margin-left: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  background-color: #007bff;
+  color: rgb(0, 0, 0);
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.account-list li button:hover {
+  background-color: #0056b3;
+}

@@ -1,0 +1,207 @@
+/* ===== Activity Page Container ===== */
+.history-page {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 30px;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* ===== Page Title ===== */
+.history-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0a84ff;
+  text-align: center;
+}
+
+/* ===== Add Ride Button ===== */
+.add-btn {
+  align-self: center;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #0a84ff, #14b8a6);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(10, 132, 255, 0.25);
+  transition: all 0.3s ease;
+}
+
+.add-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(10, 132, 255, 0.35);
+}
+
+/* ===== Empty Message ===== */
+.empty-msg {
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+}
+
+/* ===== Ride Card ===== */
+.ride-card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.ride-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(10, 132, 255, 0.25);
+}
+
+/* ===== Ride Info ===== */
+.ride-info p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.ride-meta {
+  font-size: 14px;
+  color: #555;
+}
+
+/* ===== Ride Actions ===== */
+.ride-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.status {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: white;
+}
+
+.status.upcoming {
+  background: #0a84ff;
+}
+
+.status.completed {
+  background: #14b8a6;
+}
+
+.status.cancelled {
+  background: #ff4d4d;
+}
+
+/* ===== Edit & Delete Buttons ===== */
+.edit-btn,
+.delete-btn,
+.star-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 18px;
+  transition: transform 0.2s ease;
+}
+
+.edit-btn:hover,
+.delete-btn:hover,
+.star-btn:hover {
+  transform: scale(1.2);
+}
+
+/* ===== Rating Stars ===== */
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+/* ===== Edit Form ===== */
+.ride-edit-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.ride-edit-form input,
+.ride-edit-form select {
+  padding: 8px 12px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.ride-edit-form input:focus,
+.ride-edit-form select:focus {
+  border-color: #0a84ff;
+}
+
+.ride-edit-form button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #0a84ff, #14b8a6);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ride-edit-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(10, 132, 255, 0.25);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .ride-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ride-edit-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 480px) {
+  .history-title {
+    font-size: 28px;
+  }
+
+  .add-btn {
+    padding: 8px 20px;
+  }
+
+  .ride-info p {
+    font-size: 14px;
+  }
+
+  .ride-meta {
+    font-size: 12px;
+  }
+
+  .ride-edit-form input,
+  .ride-edit-form select {
+    font-size: 13px;
+  }
+
+  .ride-edit-form button {
+    font-size: 14px;
+  }
+}

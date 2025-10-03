@@ -1,0 +1,152 @@
+/* ===== Global Container ===== */
+.home-container {
+  padding: 25px 20px;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #f0f4ff, #e0f7fa);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ===== Tabs ===== */
+.tab-switch {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.tab {
+  padding: 12px 30px;
+  border-radius: 30px;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  color: #333;
+}
+
+.tab.active {
+  background: linear-gradient(135deg, #0a84ff, #14b8a6);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.tab:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== Search Section ===== */
+.search-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.search-input {
+  flex: 1;
+  max-width: 450px;
+  padding: 12px 20px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+}
+
+.search-input:focus {
+  box-shadow: 0 10px 25px rgba(10, 132, 255, 0.3);
+}
+
+.schedule-btn {
+  padding: 12px 25px;
+  border-radius: 30px;
+  border: none;
+  background: linear-gradient(135deg, #0a84ff, #14b8a6);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(10, 132, 255, 0.25);
+}
+
+.schedule-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(10, 132, 255, 0.35);
+}
+
+/* ===== Suggestions Section ===== */
+.section-heading {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0a84ff;
+  margin-bottom: 15px;
+}
+
+.ride-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+}
+
+/* ===== Ride Card ===== */
+.ride-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 25px 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.ride-card:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 12px 25px rgba(10, 132, 255, 0.2);
+}
+
+.ride-icon {
+  font-size: 36px;
+  margin-bottom: 12px;
+  transition: transform 0.3s ease;
+}
+
+.ride-card:hover .ride-icon {
+  transform: rotate(15deg) scale(1.2);
+}
+
+.ride-label {
+  font-weight: 700;
+  font-size: 16px;
+  color: #333;
+}
+
+/* ===== Promo Banner ===== */
+.promo-banner {
+  margin-top: 30px;
+  padding: 18px 25px;
+  background: linear-gradient(135deg, #0a84ff, #14b8a6);
+  color: white;
+  border-radius: 25px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
+  box-shadow: 0 10px 25px rgba(10, 132, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.promo-banner:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(10, 132, 255, 0.45);
+}

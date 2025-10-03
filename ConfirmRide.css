@@ -1,0 +1,39 @@
+.history-section {
+  margin: 25px 0;
+}
+
+.history-card {
+  background: #fdfdfd;
+  padding: 14px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.history-card p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.history-card small {
+  display: block;
+  font-size: 12px;
+  color: #777;
+}
+
+.delete-btn {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.delete-btn:hover {
+  background: #c0392b;
+}
